@@ -1,0 +1,2 @@
+# payagstore
+sari-sari store
