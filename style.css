@@ -1,0 +1,160 @@
+/* =========================================================
+   1. VARIABLES & COLOR SETTINGS
+   ========================================================= */
+:root {
+    --primary-color: #ee4d2d;       
+    --primary-hover: #d73211;       
+    --header-bg-start: Orange;     
+    --header-bg-end: #ee4d2d;       
+    --bg-body: #f4f6f8;             
+    --card-bg: #ffffff;              
+    --text-dark: #333333;            
+    --entertainment-bg: #111827;     
+
+    --logo-size: 70px;               
+    --banner-height: 300px;          
+    --product-img-height: 180px;     
+    --category-icon-size: 2rem;      
+    --font-size-base: 16px;          
+}
+
+/* =========================================================
+   2. GENERAL STYLES
+   ========================================================= */
+body {
+    background-color: var(--bg-body);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    font-size: var(--font-size-base);
+}
+
+/* Fixed Background alang sa About Page (100% Fixed & Non-moving) */
+body.about-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Bar */
+.shopee-header {
+    background: linear-gradient(135deg, var(--header-bg-start), var(--header-bg-end));
+    color: white;
+}
+.header-logo {
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+.search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+.search-btn:hover {
+    background-color: var(--primary-hover);
+    color: white;
+}
+
+/* Carousel Banner */
+.banner-img {
+    width: 100%;                  
+    height: var(--banner-height); 
+    object-fit: cover;            
+    object-position: center;      
+}
+
+/* Category Card Item */
+.category-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-dark);
+    display: block;
+    border: 1px solid #e0e0e0;
+}
+.category-item:hover, .category-item.active {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.category-icon {
+    font-size: var(--category-icon-size);
+    color: var(--header-bg-start);
+    margin-bottom: 8px;
+}
+
+/* Product Cards */
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-color: var(--primary-color);
+}
+.product-img {
+    height: var(--product-img-height);
+    object-fit: cover;
+    width: 100%;
+}
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffc107;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+.price-tag {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Flash Sale Headers */
+.flash-sale-header {
+    background: var(--card-bg);
+    border-bottom: 3px solid var(--primary-color);
+    padding: 14px 20px;
+    border-radius: 12px 12px 0 0;
+}
+.timer-box {
+    background: #111827;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Entertainment Zone */
+.entertainment-card {
+    background: var(--entertainment-bg);
+    color: white;
+    border-radius: 16px;
+    border: 1px solid #374151;
+}
+
+/* Transparent Dark Cards for About Page */
+.about-card {
+    background: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+}
